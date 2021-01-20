@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank|Transfer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        button {
+            display: flex;
+            margin: auto;
+        }
+        /* Style inputs with type="text", select elements and textareas */
+        
+        input[type=number],
+        select,
+        textarea {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            /* Some padding */
+            border: 1px solid #ccc;
+            /* Gray border */
+            border-radius: 4px;
+            /* Rounded borders */
+            box-sizing: border-box;
+            /* Make sure that padding and width stays in place */
+            margin-top: 6px;
+            /* Add a top margin */
+            margin-bottom: 16px;
+            /* Bottom margin */
+            resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+        
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flow">
+            <div class="switch">
+                <p id="toggle">🌞 <span></span> </p>
+            </div>
+            <div class="back"><a href="customer.html">&#10006</a></div>
+        </div>
+        <div class="container">
+
+            <label for="debit">Debit From</label>
+            <select id="debit" name="Name">
+                <option>Select...</option>
+                
+                
+                
+
+              </select>
+            <label for="credt">Credit To</label>
+            <select id="credit" name="Name">
+                <option>Select...</option>
+                
+           </select>
+            <label for="Amount">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter Amount..">
+            <label for="remarks">Remarks</label>
+            <textarea id="message" name="subject" placeholder="Message.." style="height:200px"></textarea>
+
+            <button id="transfer">Transfer</button>
+
+        </div>
+        <footer>
+            <div class="foot">2021 &copy; All Rights Reserved</div>
+
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+        <script src="config.js"></script>
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="firebase.js "></script>
+        <script src="transaction.js"></script>
+</body>
+
+</html>

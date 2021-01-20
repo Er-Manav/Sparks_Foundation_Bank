@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank|Customer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <style>
+        .navbar i {
+            display: none;
+        }
+        
+        .navbar {
+            overflow: hidden;
+        }
+        
+        @media (min-width: 901px) {
+            .navbar ul {
+                position: absolute;
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar ul li a {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 730px) {
+            .navbar {
+                display: block;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+            }
+            .navbar #myLinks {
+                display: none;
+            }
+            .navbar ul li {
+                display: flex;
+                justify-content: center;
+            }
+            .navbar i {
+                color: white;
+                font-size: 25px;
+                display: inline-block;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+            }
+            .navbar i:hover {
+                color: wheat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Bank</div>
+
+        <ul id="myLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><b><a href="customer.html">CUSTOMERS</a></b></li>
+            <li><a href="transaction.html">TRANSACTION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars"></i></a>
+    </nav>
+
+    <div class="switch">
+        <p id="toggle">🌞 <span></span> </p>
+
+        <section class="data">
+            <div class="custlist">
+                <table id="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Balance</th>
+
+
+                    </tr>
+
+            </div>
+            </table>
+            <a href="popup.html"> <button style="margin: 20px auto;" id="myBtn">Transfer Money</button></a>
+
+
+
+        </section>
+
+        <footer>
+            <div class="foot ">2021 &copy; All Rights Reserved</div>
+
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+<script src="config.js"></script>
+
+<script src="firebase.js "></script>
+
+
+<script src="script.js "></script>
+
+</html>

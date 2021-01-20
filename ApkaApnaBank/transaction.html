@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <title>Bank</title>
+
+    <style>
+        .transaction {
+            height: 80%px;
+            overflow: auto;
+        }
+        
+        h2 {
+            font-size: 25px;
+            text-align: center;
+            padding: 10px 0;
+            margin: 10px auto;
+        }
+        
+        th {
+            font-size: 20px;
+        }
+        
+        tr,
+        th {
+            padding: 5px 20px;
+        }
+        
+        footer {
+            position: relative;
+        }
+        
+        .navbar i {
+            display: none;
+        }
+        
+        .navbar {
+            overflow: hidden;
+        }
+        
+        .navbar .logo {
+            justify-content: flex-start;
+        }
+        
+        @media (min-width: 901px) {
+            .navbar ul {
+                position: absolute;
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar ul li a {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 730px) {
+            .navbar {
+                display: block;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+            }
+            .navbar #myLinks {
+                display: none;
+            }
+            .navbar ul li {
+                display: flex;
+                justify-content: center;
+            }
+            .navbar i {
+                color: white;
+                font-size: 25px;
+                display: inline-block;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+            }
+            .navbar i:hover {
+                color: wheat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Bank</div>
+
+        <ul id="myLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="customer.html">CUSTOMERS</a></li>
+            <li><b><a href="transaction.html">TRANSACTION</a></b></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars"></i></a>
+    </nav>
+
+
+    <div class="switch">
+        <p id="toggle">🌞 <span></span> </p>
+
+    </div>
+
+    <h2>Transaction History</h2>
+    <div class="transaction">
+        <table class="hist" id="hist">
+            <tr>
+                <th>Date & Time</th>
+                <th>Debit From</th>
+                <th>Credited To</th>
+                <th>Amount</th>
+                <th>Remarks</th>
+            </tr>
+            <!-- <tr>
+            <td></td>
+            <td></td>
+        </tr> -->
+        </table>
+    </div>
+    <footer>
+        <div class="foot">2021 &copy; All Rights Reserved</div>
+
+    </footer>
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="transaction.js"></script>
+
+
+
+</html>

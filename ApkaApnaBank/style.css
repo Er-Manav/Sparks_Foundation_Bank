@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #171923;
+    --bg-light: #232535;
+    --font-color: #c5cddb;
+    --font-light: #ffffff;
+}
+
+.lightMode {
+    --bg-color: #ebe9e2;
+    --bg-light: #dbdad0;
+    --font-color: #3D3D3D;
+    --font-light: #202020;
+}
+
+body {
+    color: var(--font-light);
+    background-color: var(--bg-color);
+    transition: all 500ms;
+}
+
+#toggle {
+    display: inline;
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+#toggle:hover {
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 2px yellow;
+}
+
+button {
+    font-size: 20px;
+    color: grey;
+    border: 3px solid var(--font-color);
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow: 2.5px 2.5px brown;
+    transition: all 0.5s ease;
+}
+
+button:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    box-shadow: none;
+}
+
+button:hover {
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 30px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:hover {
+    font-weight: 600;
+}
+
+.switch {
+    padding: 10px 20px;
+}
+
+.logo {
+    display: inline-block;
+    color: aliceblue;
+    font-style: italic;
+    font-size: 30px;
+    padding: 10px 40px;
+}
+
+.head {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+.customer a {
+    text-decoration: none;
+    color: var(--font-light);
+    font-size: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+.customer a:hover {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.customer {
+    padding-top: 30px;
+    text-align: center;
+    margin: auto;
+    justify-content: space-around;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.foot {
+    align-content: center;
+}
+
+.data {
+    table-layout: auto;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 2px solid var(--font-color);
+    border-collapse: collapse;
+}
+
+table {
+    margin: auto;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+.main img {
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    margin: 30px auto;
+}
+
+td:hover {
+    color: chocolate;
+    transition: all 0.5s ease;
+}
+
+modal {
+    display: flex;
+    /* Hidden by default */
+    z-index: 30;
+    /* Sit on top */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: var(--bg-color);
+    /* Fallback color */
+    background-color: var(--bg-light);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: var(--font-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input {
+    border: 2px solid var(--font-color);
+    border-radius: 0px;
+}
+
+.flow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    font-size: 25px;
+    margin: 10px 20px;
+}
+
+.back a {
+    text-decoration: none;
+}
